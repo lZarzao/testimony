@@ -11,8 +11,12 @@ function Testimony(props) {
       />
 
       <div className='container-testimony-text'>
-        <p className='name-testimony'>{props.name} in {props.country}</p>
-        <p className='job-testimony'>{props.job} at {props.company}</p>
+        <p className='name-testimony'>
+          <strong>{props.name}</strong> in {props.country}
+        </p>
+        <p className='job-testimony'>
+          {props.job} at <strong>{props.company}</strong>
+        </p>
         <p className='text-testimony'>"{props.testimony}"</p>
       </div>
     </div>
