@@ -1,26 +1,28 @@
 import React from 'react';
 import '../stylesheets/Testimony.css'
 
-function Testimony(props) {
-  return (
-    <div className='container-testimony'>
+function Testimony( props ) {
+  return props.data.map((item) => (
+    <section className='container-testimony' key={item.name}>
       <img
         className='img-testimony'
-        src={require(`../assets/testimonio-${props.img}`)}
+        src={require(`../assets/testimonio-${item.img}`)}
         alt='testimony'
       />
 
       <div className='container-testimony-text'>
         <p className='name-testimony'>
-          <strong>{props.name}</strong> in {props.country}
+          <strong>{item.name}</strong> in {item.country}
         </p>
         <p className='job-testimony'>
-          {props.job} at <strong>{props.company}</strong>
+          {item.job} at <strong>{item.company}</strong>
         </p>
-        <p className='text-testimony'>"{props.testimony}"</p>
+        <p className='text-testimony' key={item.name}>
+          "{item.testimony}"
+        </p>
       </div>
-    </div>
-  );
+    </section>
+  ));
 }
 
 export default Testimony;

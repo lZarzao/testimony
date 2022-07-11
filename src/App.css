@@ -36,3 +36,12 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 580px) {
+  html,
+  body {
+    font-size: 14px;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+  }
+}

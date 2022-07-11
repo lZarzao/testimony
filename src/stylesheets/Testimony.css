@@ -1,6 +1,7 @@
 .container-testimony {
-  width: 1170px;
-  height: 368px;
+  max-width: 1170px;
+  width: auto;
+  min-height: 368px;
   margin: 10px 10px 50px;
   display: flex;
   align-items: center;
@@ -34,4 +35,35 @@
 .text-testimony {
   font-size: 1.1rem;
   text-align: justify;
+}
+
+@media (max-width: 992px) {
+  .container-testimony {
+    width: 350px;
+    flex-direction: column;
+  }
+
+  .img-testimony {
+    height: auto;
+    width: 100%;
+  }
+
+  .container-testimony-text {
+    padding: 25px;
+  }
+
+  .name-testimony {
+    font-size: 1.2rem;
+  }
+
+  .job-testimony {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 580px) {
+  .container-testimony {
+    width: 280px;
+  }
 }
